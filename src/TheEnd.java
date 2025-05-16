@@ -1,6 +1,4 @@
 public class TheEnd {
-
-
     TheEnd(){
         try {
             LearnMore.latch.await();

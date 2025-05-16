@@ -15,5 +15,6 @@ public class Main {
             frame.setVisible(true);
             frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         } while(LearnMore.learnMoreStatus);
+        new TheEnd();
     }
 }

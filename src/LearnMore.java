@@ -1,5 +1,8 @@
+import java.util.concurrent.CountDownLatch;
 
 public class LearnMore extends ShapeOperation {
+
+    public static CountDownLatch latch = new CountDownLatch(1);
     public static boolean learnMoreStatus = false;
 
     LearnMore()  {
@@ -8,8 +11,7 @@ public class LearnMore extends ShapeOperation {
                 System.out.println("Please select the shape you want to learn about");
             } else {
                 learnMoreStatus = false;
-                System.out.println("Thank you for your time");
-                System.exit(0);
+                latch.countDown();
             }
     }
 }
